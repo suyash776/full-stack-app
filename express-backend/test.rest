@@ -1,0 +1,42 @@
+###
+GET http://localhost:3000/status
+
+
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "email": "email1111a2111a11@email.com",
+    "password": "asdasdsdasdasdasdsad"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "email1111a2111a11@email.com",
+    "password": "asdasdsdasdasdasdsad"
+}
+
+
+###
+GET http://localhost:3000/songs
+
+
+###
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+     "title": "No Quarter",
+    "artist": "Led Zeppelin",
+    "genre": "Progressive rock, Psychedelic rock, Blues rock",
+    "album":"Houses of the Holy",
+    "albumImageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg",
+    "youtubeId": "https://www.youtube.com/watch?v=_BZLM2j8p5E&ab_channel=LedZeppelin-Topic",
+    "lyrics": "",
+    "tab": ""
+
+}
