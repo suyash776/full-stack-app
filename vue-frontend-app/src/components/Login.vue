@@ -87,6 +87,12 @@ export default {
       } catch (err) {
         console.log(err)
         this.error = err.response.data.error
+        this.$bvToast.toast(err.response.data.error, {
+          title: `Registration Error`,
+          variant: 'danger',
+          solid: true,
+          autoHideDelay: 5000
+        })
       }
     }
   }
