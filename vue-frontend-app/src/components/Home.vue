@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="p-4 bg-light min-vh-100">
     <b-row class="justify-content-center mb-4">
-      <b-col md="10" lg="8">
+      <b-col md="10" lg="10">
         <b-card class="shadow-lg rounded">
           <b-card-body>
             <h1 class="text-center mb-4 font-weight-bold">Welcome to Our Music Collection</h1>
@@ -12,7 +12,8 @@
               controls
               indicators
               background="#000"
-              img-height="400"
+              img-width="1024"
+              img-height="480"
               class="bg-dark"
             >
               <b-carousel-slide
@@ -37,19 +38,19 @@ export default {
     return {
       slides: [
         {
-          title: 'Song Title 1',
-          artist: 'Artist Name 1',
-          cover: 'https://via.placeholder.com/800x400?text=Album+Cover+1' // Replace with actual image URL
+          title: 'No Quarter',
+          artist: 'Led Zeppelin',
+          cover: 'https://upload.wikimedia.org/wikipedia/en/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg'
         },
         {
-          title: 'Song Title 2',
-          artist: 'Artist Name 2',
-          cover: 'https://via.placeholder.com/800x400?text=Album+Cover+2' // Replace with actual image URL
+          title: 'Good Times Bad Times',
+          artist: 'Led Zeppelin',
+          cover: 'https://upload.wikimedia.org/wikipedia/en/e/ef/Led_Zeppelin_-_Led_Zeppelin_%281969%29_front_cover.png'
         },
         {
-          title: 'Song Title 3',
-          artist: 'Artist Name 3',
-          cover: 'https://via.placeholder.com/800x400?text=Album+Cover+3' // Replace with actual image URL
+          title: 'Stadium Arcadium',
+          artist: 'Red Hot Chili Peppers',
+          cover: 'https://upload.wikimedia.org/wikipedia/en/e/e6/Stadiumarcadium.jpg'
         }
       ]
     }
@@ -82,4 +83,5 @@ export default {
   text-align: center;
   color: white;
 }
+
 </style>
