@@ -16,7 +16,5 @@ services:
       - 3000:3000
   frontend-app:
     image: vue-frontend-app
-    environment:
-      HOST: backend-app
     ports:
       - 8086:8080
