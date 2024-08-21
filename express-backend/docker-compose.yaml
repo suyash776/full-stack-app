@@ -8,9 +8,9 @@ services:
       POSTGRES_DB: db123
     ports:
       - 5432:5432
-  backend-app:
-    image: express-backend-api
-    environment:
-      HOST: db
-    ports:
-      - 3000:3000
+  # backend-app:
+  #   image: express-backend-api
+  #   environment:
+  #     HOST: db
+  #   ports:
+  #     - 3000:3000

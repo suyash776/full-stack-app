@@ -85,7 +85,7 @@ export default {
         title: `Contact message recieved`,
         variant: 'primary',
         solid: true,
-        autoHideDelay: 50000
+        autoHideDelay: 5000
       })
     }
   }

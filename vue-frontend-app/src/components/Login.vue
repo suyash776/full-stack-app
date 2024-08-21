@@ -82,7 +82,7 @@ export default {
           title: `Login Success`,
           variant: 'success',
           solid: true,
-          autoHideDelay: 50000
+          autoHideDelay: 5000
         })
       } catch (err) {
         console.log(err)

@@ -1,9 +1,21 @@
 <template>
-  <div>
-    <h5 class="mb-1">{{ song.title }}</h5>
-    <p class="mb-1 text-muted">Artist: {{ song.artist }}</p>
-    <p class="mb-1 text-muted">Album: {{ song.album }}</p>
-  </div>
+<b-card class="mb-3 shadow-sm" @click="navigateToSong" style="cursor: pointer;">
+    <b-row no-gutters>
+      <!-- Image Section -->
+      <b-col md="4" class="d-flex align-items-center">
+        <b-card-img :src="song.albumImageUrl" alt="Album Image" class="img-fluid rounded-left" />
+      </b-col>
+
+      <!-- Text Section -->
+      <b-col md="8">
+        <b-card-body>
+          <h5 class="card-title">{{ song.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ song.artist }}</h6>
+          <p class="card-text">{{ song.genre }}</p>
+        </b-card-body>
+      </b-col>
+    </b-row>
+  </b-card>
 </template>
 
 <script>
@@ -13,7 +25,15 @@ export default {
 
   props: [
     'song'
-  ]
+  ],
+  methods: {
+    navigateToSong () {
+      // Navigate to the song details page
+      console.log(this.song.id)
+
+      this.$router.push({ name: 'songs-view', params: { id: this.song.id } })
+    }
+  }
 }
 </script>
 

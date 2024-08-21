@@ -78,7 +78,7 @@ export default {
           title: `Registration Success`,
           variant: 'success',
           solid: true,
-          autoHideDelay: 50000
+          autoHideDelay: 5000
         })
         // console.log(this.$store)
         // this.$store.dispatch('setToken', response.data.token)
@@ -90,7 +90,7 @@ export default {
           title: `Registration Error`,
           variant: 'danger',
           solid: true,
-          autoHideDelay: 50000
+          autoHideDelay: 5000
         })
       }
     }

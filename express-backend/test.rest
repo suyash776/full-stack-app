@@ -40,3 +40,19 @@ Content-Type: application/json
     "tab": ""
 
 }
+
+###
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+     "title": "No Quarter",
+    "artist": "Led Zeppelin",
+    "genre": "Progressive rock, Psychedelic rock, Blues rock",
+    "album":"Houses of the Holy",
+    "albumImageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg",
+    "youtubeId": "https://www.youtube.com/embed/_BZLM2j8p5E",
+    "lyrics": "",
+    "tab": ""
+
+}

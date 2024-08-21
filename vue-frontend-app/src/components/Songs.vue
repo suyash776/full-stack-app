@@ -21,24 +21,20 @@
                 :key="song.id"
                 class="d-flex align-items-center"
               >
-                <b-img
-                  :src="song.albumImageUrl"
-                  alt="albumImageUrl image"
-                  rounded
-                  class="mr-3"
-                  width="60"
-                  height="60"
-                />
-                <div>
-                  <h5 class="mb-1">{{ song.title }}</h5>
-                  <p class="mb-1 text-muted">Artist: {{ song.artist }}</p>
-                  <p class="mb-1 text-muted">Album: {{ song.album }}</p>
-                </div>
+                <SongTile :song="song"></SongTile>
               </b-list-group-item>
             </b-list-group>
           </b-card-body>
         </b-card>
       </b-col>
+    </b-row>
+    <b-row class="justify-content-center mb-4">
+      <b-col md="8" lg="8" xl="8">
+
+      <b-button to="/songs/create" variant="primary" block class="btn-lg">
+                  Create New Song
+      </b-button>
+    </b-col>
     </b-row>
   </b-container>
 </template>
