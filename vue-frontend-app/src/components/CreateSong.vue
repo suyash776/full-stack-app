@@ -116,12 +116,12 @@
 
                   <b-form-group
                     label="Tabs"
-                    label-for="tabs"
+                    label-for="tab"
                   >
                     <b-form-textarea
-                      id="tabs"
-                      v-model="song.tabs"
-                      placeholder="Enter tabs"
+                      id="tab"
+                      v-model="song.tab"
+                      placeholder="Enter tab"
                       rows="10"
                     ></b-form-textarea>
                   </b-form-group>
@@ -153,7 +153,7 @@ export default {
         albumImageUrl: '',
         youtubeId: '',
         lyrics: '',
-        tabs: ''
+        tab: ''
       },
       validationErrors: {}
     }
@@ -195,7 +195,7 @@ export default {
             albumImageUrl: '',
             youtubeId: '',
             lyrics: '',
-            tabs: ''
+            tab: ''
           }
           this.validationErrors = {}
         }

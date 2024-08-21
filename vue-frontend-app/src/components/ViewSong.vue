@@ -47,7 +47,7 @@
 
                     <h5 class="card-title">Tabs</h5>
                     <b-form-textarea
-                      :value="song.tabs"
+                      :value="song.tab"
                       rows="10"
                       readonly
                     ></b-form-textarea>
