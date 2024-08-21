@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <PageHeader></PageHeader>
+
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
   </div>
 </template>
 
 <script>
+import PageHeader from '@/components/PageHeader.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    PageHeader
+  }
 }
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

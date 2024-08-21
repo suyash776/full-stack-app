@@ -3,7 +3,7 @@
     <b-row class="justify-content-center mb-4">
       <b-col md="8" lg="8" xl="8">
         <b-card class="p-4 shadow-lg rounded">
-          <h3 class="text-center mb-4 font-weight-bold">Register</h3>
+          <h3 class="text-center mb-4 font-weight-bold">Login</h3>
           <b-form @submit.prevent="handleSubmit">
             <b-form-group label="Email" label-for="email">
               <b-form-input
@@ -12,7 +12,7 @@
                 type="email"
                 required
                 placeholder="Enter your email"
-                class="register-form form-control-lg"
+                class="login-form  form-control-lg"
               ></b-form-input>
             </b-form-group>
 
@@ -23,17 +23,17 @@
                 type="password"
                 required
                 placeholder="Enter your password"
-                class="register-form form-control-lg"
+                class="login-form form-control-lg"
               ></b-form-input>
             </b-form-group>
 
             <b-form-group>
-              <b-button pill @click="register" type="submit" variant="primary" block class="register-button btn-lg">
-                Register
+              <b-button pill @click="login" type="submit" variant="primary" block class="login-button btn-lg">
+                Log In
               </b-button>
             </b-form-group>
             <b-form-group class="text-center">
-              <!-- <b-link href="#"  class="text-muted ">Forgot password?</b-link> -->
+              <!-- <b-link href="#" class="text-muted">Forgot password?</b-link> -->
             </b-form-group>
           </b-form>
         </b-card>
@@ -45,8 +45,9 @@
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
+
 export default {
-  name: 'Register',
+  name: 'Login',
   data () {
     return {
       email: '',
@@ -66,32 +67,26 @@ export default {
     }
   },
   methods: {
-    async register () {
+    async login () {
       try {
-        console.log('clicked register', this.email, this.password)
-        const response = await AuthenticationService.register({
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
         console.log(response.data.token, response.data.user)
-        this.$bvToast.toast(`Successfully registered ${this.email}`, {
-          title: `Registration Success`,
+        console.log(this.$store)
+
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
+        this.$bvToast.toast(`${this.email} has successfully logged in!!!`, {
+          title: `Login Success`,
           variant: 'success',
           solid: true,
           autoHideDelay: 50000
         })
-        // console.log(this.$store)
-        // this.$store.dispatch('setToken', response.data.token)
-        // this.$store.dispatch('setUser', response.data.user)
       } catch (err) {
-        // console.log(err)
-        // this.error = err.response.data.error
-        this.$bvToast.toast(err.response.data.error, {
-          title: `Registration Error`,
-          variant: 'danger',
-          solid: true,
-          autoHideDelay: 50000
-        })
+        console.log(err)
+        this.error = err.response.data.error
       }
     }
   }
@@ -134,12 +129,16 @@ li {
 a {
   color: #42b983;
 }
-.register-form {
+.login {
+  text-align: center;
+  margin:10px;
+}
+.login-form {
   width: 80%;
   text-align: center;
   margin-left:10%;
 }
-.register-button{
+.login-button{
   width: 80%;
   margin-left:10%
 
