@@ -17,4 +17,4 @@ services:
   frontend-app:
     image: vue-frontend-app
     ports:
-      - 8086:8080
+      - 8080:8080

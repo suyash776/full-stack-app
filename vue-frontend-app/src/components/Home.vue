@@ -8,12 +8,10 @@
 
             <!-- Carousel -->
             <b-carousel
-              id="carousel"
+              id="myCarousel"
               controls
               indicators
               background="#000"
-              img-width="1024"
-              img-height="480"
               class="bg-dark"
             >
               <b-carousel-slide
@@ -59,9 +57,9 @@ export default {
 </script>
 
 <style scoped>
-.min-vh-100 {
+/* .min-vh-100 {
   min-height: 100vh;
-}
+} */
 
 .bg-light {
   background-color: #f8f9fa !important;
@@ -83,5 +81,14 @@ export default {
   text-align: center;
   color: white;
 }
-
+.carousel-inner {
+  max-height: 450px !important;
+}
+#myCarousel .item{
+  height: 300px;
+}
+#myCarousel .item img{
+  height: 450px;
+  width: 500px;
+}
 </style>
